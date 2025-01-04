@@ -1,0 +1,27 @@
+[project]
+name = "methods-of-data-processing-and-analysis"
+version = "1.0.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Yuliia Shevchenko", email = "ulka.shevchenko@gmail.com"},
+]
+dependencies = [
+    "jupyter>=1.1.1",
+    "numpy>=2.2.1",
+    "matplotlib>=3.10.0",
+    "scikit-learn>=1.6.0",
+    "statsmodels>=0.14.4",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.options]
+sync = ["--no-self"]
+install = ["--no-self"]
+lock = ["--update-reuse", "-G:all", "--implementation=cpython", "--python=3.12"]
+update = ["--no-self"]
+remove = ["--no-self"]
